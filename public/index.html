@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crèmerie des glaces</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="parent">
+    <div class="div_entete">
+        <h1>Crèmerie des glaces</h1>
+    </div>
+    <div class="div_prix">
+        <h2>Menu</h2>
+        <ul class="id_menu">
+            <li>Petite crème glacée ... 3.00$</li>
+            <li>Moyenne crème glacée ... 4.00$</li>
+            <li>Grande crème glacée ... 5.00$</li>
+        </ul>
+    </div>
+    <div class="div_creme_glace">
+        <h2>Crème glacée</h2>
+
+        <!-- table des saveurs maintenant vide, remplie via JS -->
+        <table class="tab_creme_glace" id="tableSaveurs"></table>
+
+        <h2>Format</h2>
+        <table class="tab_creme_glace">
+            <tr>
+                <td><input type="radio" id="petite" name="format" value="Petite" checked="checked"></td>
+                <td><label for="petite">Petite</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="moyenne" name="format" value="Moyenne"></td>
+                <td><label for="moyenne">Moyenne</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="grande" name="format" value="Grande"></td>
+                <td><label for="grande">Grande</label></td>
+            </tr>
+        </table>
+        <button id="addItemButton" class="centered-button" type="button" value="Submit">Commander</button>
+        <div id="contenu"></div>
+    </div>
+    <div class="div_commande" id="div_commande">
+        <h2>Commandes</h2>
+        <ul id="mesCommandes" class="id_list"></ul>
+    </div>
+</div>
+</body>
+</html>
