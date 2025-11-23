@@ -1,4 +1,4 @@
-// script.js
+
 window.onload = function() {
   chargerCremesGlacees();
   chargerCommandes();
@@ -54,6 +54,8 @@ function chargerCommandes() {
     });
 }
 
+
+
 function envoyerCommande() {
   const radioFormat = document.getElementsByName("format");
   const radioSaveur = document.getElementsByName("saveur");
@@ -74,6 +76,7 @@ function envoyerCommande() {
     }
   }
 
+
   fetch("/api/commandes", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -83,4 +86,8 @@ function envoyerCommande() {
     .then(() => {
       chargerCommandes();
     });
+
 }
+
+
+
