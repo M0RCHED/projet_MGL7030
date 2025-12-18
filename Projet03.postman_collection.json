@@ -1,23 +1,21 @@
 {
 	"info": {
-		"_postman_id": "27788901-764b-47ba-afc4-6a4ce15db544",
-		"name": "Projet02",
+		"_postman_id": "3d9444f2-8d47-479f-9362-4fd91448c83d",
+		"name": "Projet03",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "45096899"
 	},
 	"item": [
 		{
-			"name": "Liste variétés crème glacée",
+			"name": "cremes-glacees",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/cremes-glacees",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/api/cremes-glacees",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"cremes-glacees"
@@ -27,13 +25,13 @@
 			"response": []
 		},
 		{
-			"name": "Ajouter variété crème glacée",
+			"name": "cremes-glacees",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"nom\": \"Fraise\"\r\n}",
+					"raw": "{ \"nom\": \"Ferrero\" }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,12 +39,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/cremes-glacees",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/api/cremes-glacees",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"cremes-glacees"
@@ -56,38 +52,34 @@
 			"response": []
 		},
 		{
-			"name": "Supprimer variété crème glacée",
+			"name": "cremes-glacees by id",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/cremes-glacees/1763910955989",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/api/cremes-glacees/5",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"cremes-glacees",
-						"1763910955989"
+						"5"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Liste des commandes",
+			"name": "commandes",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/commandes",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/api/commandes",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"commandes"
@@ -97,13 +89,13 @@
 			"response": []
 		},
 		{
-			"name": "Ajouter commande",
+			"name": "commandes",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"format\": \"Petite\",\r\n  \"saveur\": \"Chocolat\"\r\n}",
+					"raw": "{ \"format\": \"Petite\", \"saveur\": \"Vanille\" }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -111,15 +103,31 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/commandes",
-					"protocol": "http",
+					"raw": "{{baseUrl}}/api/commandes",
 					"host": [
-						"localhost"
+						"{{baseUrl}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"commandes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET login page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"login"
 					]
 				}
 			},

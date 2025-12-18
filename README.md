@@ -69,7 +69,7 @@ Le mot de passe est stocké sous forme hachée avec bcrypt.
 
 ## Configuration des variables d’environnement
 
-Créer un fichier .env à la racine du projet (non inclus dans la remise) :
+Créer un fichier .env à la racine du projet  :
 
 PORT=3000
 JWT_SECRET=change_me
