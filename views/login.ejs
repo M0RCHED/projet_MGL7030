@@ -1,0 +1,20 @@
+<h1>Administration</h1>
+
+<% if (erreur) { %>
+  <p><%= erreur %></p>
+<% } %>
+
+<form action="/api/login" method="POST">
+  <label>Nom d'utilisateur :</label>
+  <input type="text" name="username" required><br><br>
+
+  <label>Mot de passe :</label>
+  <input type="password" name="password" required><br><br>
+
+  <button type="submit">Se connecter</button>
+</form>
+
+<br>
+
+<a href="/api/login/google">Se connecter avec Google</a>
+

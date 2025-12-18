@@ -1,0 +1,14 @@
+<h1>Supprimer variante crème glacée</h1>
+
+<% if (erreur) { %>
+  <p><%= erreur %></p>
+<% } %>
+
+<form method="POST" action="/api/creme-glacees/<%= id %>">
+  <label>ID :</label>
+  <input type="number" name="id" value="<%= id %>" required>
+  <button type="submit">Supprimer</button>
+</form>
+
+<br>
+<a href="/api/gestion">Retour</a>
