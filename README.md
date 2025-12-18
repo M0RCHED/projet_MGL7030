@@ -19,7 +19,7 @@ Il ajoute la persistance des données avec PostgreSQL ainsi que des mécanismes 
 ---
 
 ## Structure du projet
-projet_MGL7030-main/
+```projet_MGL7030-main/
 ├─ index.js
 ├─ package.json
 ├─ views/
@@ -37,6 +37,8 @@ projet_MGL7030-main/
 │  └─ add_admin.js
 ├─ README.md
 └─ Projet03.postman_collection.json
+
+```
 
 ---
 
@@ -58,10 +60,10 @@ Tables créées :
 ## Ajout d’un administrateur
 
 Commande :
-node scripts/add_admin.js <username> <password> [email_google]
+``` node scripts/add_admin.js <username> <password> [email_google] ```
 
 Exemple :
-node scripts/add_admin.js admin admin123 admin@gmail.com
+``` node scripts/add_admin.js admin admin123 admin@gmail.com ```
 
 Le mot de passe est stocké sous forme hachée avec bcrypt.
 
@@ -70,7 +72,7 @@ Le mot de passe est stocké sous forme hachée avec bcrypt.
 ## Configuration des variables d’environnement
 
 Créer un fichier .env à la racine du projet  :
-
+```
 PORT=3000
 JWT_SECRET=change_me
 
@@ -83,13 +85,16 @@ PGPASSWORD=change_me
 GOOGLE_CLIENT_ID=change_me
 GOOGLE_CLIENT_SECRET=change_me
 GOOGLE_CALLBACK_URL=http://localhost:3000/api/login/google/callback
+```
 
 ---
 
 ## Lancement du serveur
 
+```
 npm install
 npm start
+```
 
 Le serveur démarre sur :
 http://localhost:3000
@@ -140,6 +145,7 @@ Les échanges se font en JSON.
 ## Postman
 
 Une collection Postman est fournie :
+
 Projet03.postman_collection.json
 
 Elle permet de tester toutes les routes de l’API REST.
@@ -148,7 +154,9 @@ Elle permet de tester toutes les routes de l’API REST.
 
 ## Backup de la base de données
 
+```
 pg_dump -d cremerie -f backup_cremerie.sql
+```
 
 ---
 
